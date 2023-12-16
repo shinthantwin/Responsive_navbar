@@ -1,0 +1,74 @@
+.nav_bar{
+	display:flex ;
+	list-style-type: none;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	background: lightcoral;
+}
+.navbar_item{
+   width: 150px;
+}
+.nav_bar a{
+	text-decoration: none;
+}
+.dropdown_content{
+	list-style-type: none;
+   display: none;
+   position: absolute; top: 40px;
+   background: gray;
+   padding: 20px;
+   min-width: 50px;
+   border-radius: 20px;
+}
+.dropdown:hover .dropdown_content{
+	display: block;
+}
+.dropdown_content li+li{
+	margin-top: 20px;
+}
+.dropdown{
+	position: relative;
+}
+.nav li{
+	padding: 10px;
+}
+input[type=checkbox]{
+	display: none;
+}
+.toggler{
+  display: none;
+  font-size: 25px;
+}
+@media only screen and (max-width:768px){
+	.nav_bar{
+		display: none;
+		position: absolute; top: 60px; left: 0px; right:0px;
+		background: lightblue;
+		padding-bottom: 20px;
+	}
+	.nav_bar li+li{
+		padding-top: 12px;
+	}
+.toggler{
+	display: block;
+}
+.nav{
+	justify-content: space-between;
+	padding-left: 20px;padding-right: 20px;
+}
+input[type=checkbox]:checked ~ .nav_bar{
+display: block;
+}
+	
+	.nav img{padding-left: 25px}
+	.nav_bar{
+		flex-direction: column;
+	}
+	nav_bar li+li{
+	margin-top: 20px;
+}
+
+}
